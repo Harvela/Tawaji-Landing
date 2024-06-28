@@ -1,38 +1,45 @@
 import Link from 'next/link';
 import React from 'react';
+import { IoIosArrowForward } from 'react-icons/io';
+
+import { services } from '@/utils/services';
 
 const Hero: React.FC = () => {
   return (
-    <div className="">
-      <div id="home" className=" flex flex-row">
-        <div className="flex h-[80vh] w-full flex-col items-center justify-center p-4 text-center md:p-0">
-          <h2 className="text-[14px] font-bold text-white/90 md:text-[16px]">
-            TAWAJI CONSTRUCTION
-          </h2>
-          <h1 className="my-[30px] text-center text-[28px] font-semibold text-white/80 md:w-[80%] md:text-[60px]">
-            Le collaborateur idéal pour vos projets de construction
-          </h1>
-          <div className="mt-[20px] flex flex-col gap-5 md:flex-row">
-            <Link
-              href="#categories"
-              color="white"
-              className="animate-infinite animate-wiggle rounded-lg bg-primary-700 px-6 py-3 text-center font-semibold text-white md:self-end"
+    <div
+      id="home"
+      className="flex h-[90vh] w-full flex-col items-center justify-center p-4 text-center md:p-0"
+    >
+      <Link href="#" className="flex flex-row items-center">
+        <img src="/assets/images/home/logo.png" className="h-16" alt="Logo" />
+        <h1 className="text-5xl font-semibold text-white">TAWAJI</h1>
+      </Link>
+      <h2 className="my-[30px] text-[14px] text-white/80 md:text-[24px]">
+        L’entreprise qui vous offre des servces de qualite
+      </h2>
+      <div className="mt-[40px] grid grid-cols-3 gap-16">
+        {services.map((service) => {
+          const IconComponent = service.icon;
+          return (
+            <div
+              key={service.name}
+              className="flex flex-col items-center justify-center rounded-lg bg-white px-12 py-8"
             >
-              Voir notre catalogue
-            </Link>
-          </div>
-        </div>
-        {/* <div className="hidden w-[50%]  md:block">
-          <img
-            src="/assets/images/home/truck.png"
-            alt="Hero"
-            className="z-50 h-[100vh] w-[90%] object-cover"
-          />
-        </div> */}
+              <IconComponent className="text-[36px] text-primary-700" />
+              <h2 className="my-[24px] text-[22px] font-semibold text-primary-700">
+                {service.name}
+              </h2>
+              <Link
+                href={service.link}
+                className="flex flex-row items-center gap-2 rounded-lg bg-primary-700 px-8 py-1 text-[11px] text-white md:text-sm"
+              >
+                <span>Visiter</span>
+                <IoIosArrowForward />
+              </Link>
+            </div>
+          );
+        })}
       </div>
-      {/* <div className="mt-[140px] md:mt-[-140px]">
-        <CanvasRevealEffectDemo2 />
-      </div> */}
     </div>
   );
 };
