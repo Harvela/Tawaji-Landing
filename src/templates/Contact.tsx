@@ -155,7 +155,7 @@ export function Contact() {
           </button>
         </div>
         <iframe
-          title="Tawaji Construction Machines"
+          title="Tawaji"
           src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3907.0928762382046!2d27.500672!3d-11.687830000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDQxJzE2LjIiUyAyN8KwMzAnMDIuNCJF!5e0!3m2!1sfr!2scd!4v1718598724909!5m2!1sfr!2scd"
           style={{ border: 0 }}
           className="h-[500px] w-full md:h-auto md:w-[60%]"
