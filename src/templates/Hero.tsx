@@ -109,13 +109,14 @@ const Hero: React.FC = () => {
                   <h2 className="my-[24px] text-[22px] font-semibold text-primary-700">
                     {service.name}
                   </h2>
-                  <Link
+                  <a
+                    target="_blank"
                     href={service.link}
-                    className="flex flex-row items-center gap-2 rounded-lg bg-primary-700 px-8 py-1 text-[11px] text-white md:text-sm"
+                    className="flex flex-row items-center gap-2 rounded-lg bg-primary-700 px-8 py-1 text-[11px] text-white hover:bg-primary-700/80 md:text-sm"
                   >
                     <span>Visiter</span>
                     <IoIosArrowForward />
-                  </Link>
+                  </a>
                 </div>
               );
             })}

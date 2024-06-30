@@ -4,17 +4,17 @@ import { LuAnchor, LuKey } from 'react-icons/lu';
 export const services = [
   {
     name: 'TAWAJI Construction',
-    link: 'compacteuse',
+    link: 'https://tawaji-machines.vercel.app',
     icon: LuAnchor,
   },
   {
     name: 'TAWAJI Travel',
-    link: 'compacteuse',
+    link: 'https://e-ticket-virid.vercel.app',
     icon: BsSend,
   },
   {
     name: 'TAWAJI Security',
-    link: 'compacteuse',
+    link: '/security',
     icon: LuKey,
   },
 ];
